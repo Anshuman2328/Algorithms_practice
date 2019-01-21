@@ -2,12 +2,11 @@
 // // The Dojo Collection
 // // Chapter_01_Fundamentals
 
-// // This was a basics chpater but on 20180618 I took a second pass at a select few 
 
 // //  Setting and Swapping
 // // Set myNumber to 42. Set myName to your name. Now swap myNumber into myName & vice versa.
-// let myName = "Jason";
-// let myNum = "42";
+// let myName = "Ash";
+// let myNum = "30";
 // [myName, myNum] = [myNum, myName];
 // console.log("new name: " + myName + ",\nnewNum: " + myNum);
 
