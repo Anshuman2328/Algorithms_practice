@@ -24,25 +24,34 @@
 // print(-10, 3);
 
 
+
+
+
 //  print and count, print all the multiples of 5 from the given set of two nums and log how many are there.
 
-function print(min, max){
-  var count = 0;
-  var sum = 0;
-  for (var i = min; i <= max; i++){
-    if (i % 5 == 0){
-        count ++;
-        sum += i;
-    }
-  }
-  console.log(sum);
-  console.log(count);
-}
+// function print(min, max){
+//   var count = 0;
+//   var sum = 0;
+//   for (var i = min; i <= max; i++){
+//     console.log(i);
+//     if (i % 5 == 0){
+//       count ++;
+//       console.log(i);
+//       sum += i;
+//       console.log(i);
+//     }
+//     console.log(i);
+//   }
+//   console.log(sum);
+//   console.log(count);
+// }
+// print(6,10)
 
-print(5,25)
+
 
 
 // Using While, print multiples of 6;
+
 // function print(num, max){
 //   while(num <= max){
 //     if(num % 6 == 0){
@@ -51,10 +60,52 @@ print(5,25)
 //     num++;
 //   }
 // }
-
 // print(6, 60);
 
-//  Flexible countdowns
+
+
+// dont worry be happy, create a function that greets you and call it 98 times
+
+// function greet(n){
+//   var count = 0;
+//   while (count < n){
+//     console.log("Hello, How are you doing today");
+//     count ++;
+//   }
+//   console.log(count);
+// }
+// greet(100);
+
+
+
+
+//  Multiples of 3, print all the multiples of 3 from 3 to -300 and skip if the no is -3 and -6
+
+// function multiples(low, high){
+//   for(var i = low; i <= high; i++){
+//     if (i % 3 == 0 && i !== -3 && i !== -6){
+//       // console.log(i)
+//       console.log("The num is " + i);
+//     } 
+//   }
+// }
+// multiples(-20,10);
+
+
+
+// Print integers  using While from 2000 to 5280
+
+function print(low, high){
+  while (low <=  high){
+    console.log(low);
+    low++;
+  }
+}
+
+print(10,20);
+
+
+//  Flexible countdowns, 
 
 // function flexble(high, low, num){
 //   for (x = high; x>= low; x = x-num){
@@ -62,6 +113,10 @@ print(5,25)
 //   }
 // }
 // flexble(10,2,3)
+
+
+
+
 
 // function birthday(day, month) {
 //     if ((day == 2 && month == 28) || (day == 28 && month == 2)){
