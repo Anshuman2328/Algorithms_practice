@@ -1,47 +1,45 @@
-//  Setting and Swapping
+//  Setting and Swapping, set a number and a name and then swap it 
 
 // var myNumber = 42;
 // var myName = "Ash";
 // console.log(myName);
 // console.log(myNumber);
-
 // var temp = myName;
 // console.log(temp);
-
 // myName = myNumber;
 // myNumber = temp;
-
 // console.log("My Name is " + myName + " since I just swapped it ");
 // console.log(myNumber);
 
 
-//  Print -52 to 1066
+
+
+//  Print -52 to 1066  print all the integers from the provided numbers
 
 // function print(min, max){
 //   for (var i= min; i<= max; i++){
 //     console.log(i);
 //   }
 // }
-
 // print(-10, 3);
 
 
-//  print and count
+//  print and count, print all the multiples of 5 from the given set of two nums and log how many are there.
 
-// function print(min, max){
-//   var count = 0;
-//   var sum = 0;
-//   for (var i = min; i <= max; i++){
-//     if (i % 5 == 0){
-//         count ++;
-//         sum += i;
-//     }
-//   }
-//   console.log(sum);
-//   console.log(count);
-// }
+function print(min, max){
+  var count = 0;
+  var sum = 0;
+  for (var i = min; i <= max; i++){
+    if (i % 5 == 0){
+        count ++;
+        sum += i;
+    }
+  }
+  console.log(sum);
+  console.log(count);
+}
 
-// print(5,25)
+print(5,25)
 
 
 // Using While, print multiples of 6;
@@ -519,38 +517,38 @@
 
 //  this is how you initiate a stack 
 
-class stack{
-  constructor() {
-    this.data = [];
-  }
+// class stack{
+//   constructor() {
+//     this.data = [];
+//   }
 
-  push(record){
-    this.data.push(record);
-  }
+//   push(record){
+//     this.data.push(record);
+//   }
 
-  pop(){
-   return this.data.pop();
-  }
+//   pop(){
+//    return this.data.pop();
+//   }
 
-  peek() {
-    return this.data[this.data.length - 1];
-  }
-}
+//   peek() {
+//     return this.data[this.data.length - 1];
+//   }
+// }
 
-var s = new stack();
+// var s = new stack();
 
-function test(hello){
-  console.log(s);
-  // s.pop();
-  // console.log(s);
-  s.push(hello);
-  s.push(hello);
-  s.push(hello);
-  s.push(hello);
-  console.log(s);
-  s.pop();
-  console.log(s);
-}
+// function test(hello){
+//   console.log(s);
+//   // s.pop();
+//   // console.log(s);
+//   s.push(hello);
+//   s.push(hello);
+//   s.push(hello);
+//   s.push(hello);
+//   console.log(s);
+//   s.pop();
+//   console.log(s);
+// }
 
 
-test(1);
+// test(1);
