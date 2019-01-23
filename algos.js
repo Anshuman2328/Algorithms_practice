@@ -193,11 +193,6 @@
 //   birthday(4, 4);
 
 
-  //  Print -52 to 1066
-// Print integers from -52 to 1066 using a FOR loop.
-// for (let i = -2; i <= 16; i++) {
-//     console.log(i);
-// }
 
 // //  Don’t Worry, Be Happy
 // // // Create beCheerful(). Within it, console.log string "good morning!" Call it 98 times.
@@ -210,22 +205,6 @@
 // beCheerful(9);
 
 
-// //  Multiples of Three – but Not All
-// // Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
-// for (let i = 3; i >= -10; i--) {
-//   if (i === -3 || i=== -6){
-//     continue;
-//   }
-//   console.log(i);
-// }
-
-// other way to do this is 
-
-//  Multiples of Three – but Not All
-// Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
-// for (let i = 3; i >= -300; i--) {
-//   (i == -3) || (i == -6) ? false : console.log(i);
-// }
 
 
 //  Printing Integers with While
@@ -235,6 +214,9 @@
 //     console.log(i);
 //     i++;
 // }
+
+
+
 
 // function leapYearCheck(num) {
 //     if (num % 400 == 0) {
