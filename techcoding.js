@@ -149,3 +149,62 @@
 // %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  END OF Reverse an Int $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
 
 
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Max Character in a String $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Max Character in a String $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Max Character in a String $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Max Character in a String $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+//  solution 1: this will give the first max char from the provided string
+
+// function max(string){
+//     var map = {};
+//     var count = 0;
+//     var maxChar = '';
+//     for(char of string){
+//         // console.log(map[char]);
+//         if(!map[char]){
+//             map[char] = 1;
+//             // console.log(map[char]);
+//         } else {
+//             map[char]++;
+//             // console.log(map[char]);
+//         }
+//     }
+//     console.log(map);
+
+//     for(char in map){
+//         if(map[char]> count){
+//             count = map[char];
+//             maxChar = char;
+//         }
+
+//     }
+//     console.log(count);
+//     console.log(maxChar);
+// }
+
+// max('heelloo');
+
+
+//  this is to find the longest word in the string, this will also give back the word and the length of the word
+// function word(str){
+//     var newstr = str.split(' ');
+//     var newcount = 0;
+//     var neword = '';
+//     for(var i = 0; i<newstr.length; i++){
+//         if(newstr[i].length>newcount){
+//             newcount = newstr[i].length;
+//             neword = newstr[i];
+//         }
+//     }
+//     console.log(newcount);
+//     console.log(neword);
+// }
+
+// word('The quick brown fox jumped over the lazy dog');
+// word("this is a test and it should return the word Anshuman");
+
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  END OF Max char $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  END OF Max char $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  END OF Max char $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  END OF Max char $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
