@@ -463,26 +463,101 @@
 
 
 
-// solution 2: 
+// solution 2:  This one uses rcursions. 
 
-function steps(n, row = 0, result = ''){
-    if (n === row){
-        return;
+// function steps(n, row = 0, result = ''){
+//     if (n === row){
+//         return;
+//     }
+//     if(n === result.length){
+//         console.log(result);
+//         return steps(n, row + 1);
+//     }
+//     if(result.length <= row){
+//         result += '#';
+//     } else {
+//         result += ' ';
+//     }
+//     steps(n, row, result);
+// }
+
+// steps(14);
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+
+//  Solution 1: the logic is for every row columns are  (2 * row - 1 ), so for example,
+// for 2 rows, columns needed are 3, hence loop for x axis and create an empty string each time
+// for the nested loop, loop from y axis 0 till y = (2*row -1), use math.floor to find the mid point lower 
+// this mid point is the index level for the string, check if the left of the mid and right of the mid is less 
+// than the current y. if it is add '#' so each side else just add the space
+// function pyramid(num){
+//     const mid = Math.floor((2*num -1)/2);
+//     for(let x = 0; x < num; x++){
+//         let lev = '';
+//         for(let y = 0; y <= (2*num -1); y++){
+//             if(mid - x <= y && mid + x >= y){
+//                 lev += '#';
+//             } else {
+//                 lev += ' ';
+//             }
+//         }
+//         console.log(lev);
+//     }
+// }
+// pyramid(4);
+
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Pyramid - Making a pyramid $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+
+// Solution 1: Initiate a count at 0, regex and lowercase the given string and check against each vowel, VERY BRUTE FORCE
+// function vowels(str){
+//     var newstr = str.replace(/[^\w]/g, '').toLowerCase();
+//     var count = 0;
+//     // console.log(newstr);
+//     for(let char in newstr){
+//         // console.log(newstr[char]);
+//         if (newstr[char] === 'a' || newstr[char] === 'e' || newstr[char] === 'i' || newstr[char] === 'o' || newstr[char] === 'u' ){
+//             count ++
+//         }
+//     }
+//     return count;
+// }
+
+
+// Solution 2: Cleaner solution, this one used a checker string called myvowels that contains all the vowels,
+//  within the for loop use if clause and use  .includes method and pass str as argument, and increment the count
+
+function vowels(str){
+    let count = 0;
+    const myvowels = 'aeiou';
+    for(let char of str.toLowerCase()){
+        if(myvowels.includes(char)){
+            count++;
+        }
     }
-    if(n === result.length){
-        console.log(result);
-        return steps(n, row + 1);
-    }
-    if(result.length <= row){
-        result += '#';
-    } else {
-        result += ' ';
-    }
-    steps(n, row, result);
+    return count;
 }
-
-steps(14);
-// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
-// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
-// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
-// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of - Making a step $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+console.log(vowels("hi there"));
+console.log(vowels("why do you ask?"));
+console.log(vowels("why BCDRFT?"));
+console.log(vowels("why aeiousdaqwertyuioasdfghjklzxcvbnm?"));
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
+// %%$%%%$%$%$%$%$%$%$%$%$%$%$%$%$%  End of Vowels  $%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$
